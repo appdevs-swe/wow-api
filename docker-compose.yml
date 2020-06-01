@@ -1,0 +1,8 @@
+version: '3.4'
+
+services:
+  wow.api:
+    image: ${DOCKER_REGISTRY-}wowapi
+    build:
+      context: .
+      dockerfile: Wow.API/Dockerfile
