@@ -12,4 +12,7 @@ services:
     build:
       context: .
       dockerfile: Wow.API/Dockerfile
+    depends_on:
+    - sql
+    - redis
  

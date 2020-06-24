@@ -28,8 +28,20 @@ namespace Wow.API
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddControllers();
+
             services.AddDbContext<SchoolContext>(options =>
-                        options.UseSqlServer(Configuration.GetConnectionString("DefaultConnection")));
+            {
+                options.UseSqlServer(Configuration.GetConnectionString("DefaultConnection"),
+                        providerOptions => providerOptions.EnableRetryOnFailure()
+                    );
+                
+            });
+
+            services.AddStackExchangeRedisCache(options =>
+            {
+                options.Configuration = Configuration.GetConnectionString("RedisConnection");
+                options.InstanceName = "Wow.Redis";
+            });
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
