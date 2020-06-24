@@ -1,6 +1,6 @@
 using System;
 
-namespace Wow.API
+namespace Wow.API.Models
 {
     public class WeatherForecast
     {

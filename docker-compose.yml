@@ -1,8 +1,15 @@
 version: '3.4'
 
 services:
+  sql:
+    image: microsoft/mssql-server-linux:2017-latest
+  redis:
+    image: redis
+    ports:
+      - "6379:6379"
   wow.api:
     image: ${DOCKER_REGISTRY-}wowapi
     build:
       context: .
       dockerfile: Wow.API/Dockerfile
+ 
