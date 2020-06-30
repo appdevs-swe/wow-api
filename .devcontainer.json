@@ -22,7 +22,7 @@
 	//"runServices": ["sql","redis"],
 
 	// Use 'forwardPorts' to make a list of ports inside the container available locally.
-	 "forwardPorts": [80],
+	 "forwardPorts": [80, 5433, 6379],
 
 	// [Optional] To reuse of your local HTTPS dev cert, first export it locally using this command:
 	//  * Windows PowerShell:
