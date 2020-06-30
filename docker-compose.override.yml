@@ -6,10 +6,10 @@ services:
       - ASPNETCORE_ENVIRONMENT=Development
       #- ASPNETCORE_URLS=https://+:443;http://+:80
     ports:
-      #- "80"
-     # - "443"
-      - "5000"
-      - "5001"
+      - "80"
+      - "443"
+     # - "5000"
+     # - "5001"
     volumes:
       - ${APPDATA}/ASP.NET/Https:/root/.aspnet/https:ro
       # Update this to wherever you want VS Code to mount the folder of your project
