@@ -11,7 +11,7 @@ services:
     image: ${DOCKER_REGISTRY-}wowapi
     build:
       context: .
-      dockerfile: Wow.API/Dockerfile
+      dockerfile: Dockerfile
     depends_on:
     - sql
     - redis
