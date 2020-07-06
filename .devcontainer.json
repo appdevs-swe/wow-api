@@ -4,10 +4,10 @@
 	"name": "C# (.NET Core 5.0)",
 	//"dockerFile": "Dockerfile",
 	"dockerComposeFile": [
-		"docker-compose.yml",
-		"docker-compose.override.yml"
+		"docker-compose-dev-container.yml",
+		"docker-compose-dev-container.override.yml"
 	],
-	"service": "wow.api",
+	"service": "wow.api.dev",
 	// Set *default* container specific settings.json values on container create.
 	"settings": {
 		"terminal.integrated.shell.linux": "/bin/bash"

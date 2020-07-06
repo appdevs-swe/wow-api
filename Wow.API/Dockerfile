@@ -8,7 +8,6 @@ EXPOSE 443
 FROM mcr.microsoft.com/dotnet/sdk:5.0-buster-slim AS build
 WORKDIR /src
 COPY ["Wow.API/Wow.API.csproj", "Wow.API/"]
-COPY ["Wow.Business/Wow.Business.csproj", "Wow.Business/"]
 RUN dotnet restore "Wow.API/Wow.API.csproj"
 COPY . .
 WORKDIR "/src/Wow.API"
