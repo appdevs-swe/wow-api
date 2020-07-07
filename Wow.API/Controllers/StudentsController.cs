@@ -19,9 +19,10 @@ namespace Wow.API.Controllers
         private readonly SchoolContext _context;
         private readonly ILogger<StudentsController> _logger;
 
-        public StudentsController(SchoolContext context)
+        public StudentsController(SchoolContext context,ILogger<StudentsController> logger)
         {
             _context = context;
+            _logger = logger;
         }
 
         [HttpGet]

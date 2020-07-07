@@ -12,9 +12,10 @@ namespace Wow.API.Controllers
         private readonly IDistributedCache cache;
         private readonly ILogger<CacheController> _logger;
 
-        public CacheController(IDistributedCache cache)
+        public CacheController(IDistributedCache cache,ILogger<CacheController> logger)
         {
             this.cache = cache;
+            _logger = logger;
         }
 
         [HttpPost()]
