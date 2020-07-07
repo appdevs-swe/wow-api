@@ -19,7 +19,9 @@
 		"ms-dotnettools.csharp",
 		"ms-azuretools.vscode-docker",
 		"vitorsalgado.vscode-redis",
-		"ms-mssql.mssql"
+		"ms-mssql.mssql",
+		"humao.rest-client",
+		"ms-vscode.vscode-node-azure-pack"
 	],
 	//"runServices": ["sql","redis"],
 

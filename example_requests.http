@@ -1,0 +1,14 @@
+### Get Students
+GET http://localhost:9000/api/students HTTP/1.1
+
+### Post to cache
+POST http://localhost:9000/api/cache HTTP/1.1
+content-type: application/json
+
+{
+    "Key": "MyKey",
+    "Value": "MyValue"
+}
+
+### Get from cache
+GET http://localhost:9000/api/cache/MyKey HTTP/1.1
