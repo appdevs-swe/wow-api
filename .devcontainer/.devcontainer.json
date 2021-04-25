@@ -4,10 +4,11 @@
 	"name": "C# (.NET Core 5.0)",
 	//"dockerFile": "Dockerfile",
 	"dockerComposeFile": [
-		"docker-compose-dev-container.yml",
-		"docker-compose-dev-container.override.yml"
+		"docker-compose.yml",
+		"docker-compose.override.yml"
 	],
-	"service": "wow.api.dev",
+	"service": "devenv",
+	//"runServices": ["sql","redis"],
 	// Set *default* container specific settings.json values on container create.
 	"settings": {
 		"terminal.integrated.shell.linux": "/bin/bash"
@@ -23,7 +24,7 @@
 		"humao.rest-client",
 		"ms-vscode.vscode-node-azure-pack"
 	],
-	//"runServices": ["sql","redis"],
+	
 
 	// Use 'forwardPorts' to make a list of ports inside the container available locally.
 	 "forwardPorts": [80, 5433, 6379],

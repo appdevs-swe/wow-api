@@ -7,11 +7,11 @@ services:
     image: redis
     ports:
       - "6379:6379"
-  wow.api.dev:
-    image: ${DOCKER_REGISTRY-}wowapi
+  devenv:
+    image:  ${DOCKER_REGISTRY-}devenv
     build:
       context: .
-      dockerfile: Dev.Dockerfile
+      dockerfile: Dockerfile
     depends_on:
     - sql
     - redis
