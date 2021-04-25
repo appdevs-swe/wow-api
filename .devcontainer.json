@@ -7,7 +7,7 @@
 		"docker-compose-dev-container.yml",
 		"docker-compose-dev-container.override.yml"
 	],
-	"service": "wow.api.dev",
+	"service": "devenvironment",
 	// Set *default* container specific settings.json values on container create.
 	"settings": {
 		"terminal.integrated.shell.linux": "/bin/bash"
